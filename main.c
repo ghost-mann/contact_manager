@@ -23,6 +23,20 @@ int main() {
         scanf("%d", &choice);
 
         if (choice == 1) {
+            if (count >= 10) {
+                printf("List is full! Cannot add more students.\n");
+            }
+            else {
+                printf("Enter student name: ");
+                scanf("%s", students[count].name);
+
+                printf("Enter marks (0-100): ");
+                scanf("%d", &students[count].marks);
+
+                count++;
+
+                printf("Student added successfully!\n");
+            }
 
         }
         else if (choice == 2) {
