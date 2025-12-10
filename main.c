@@ -40,9 +40,34 @@ int main() {
 
         }
         else if (choice == 2) {
-
+            if (count == 0) {
+                printf("No students to display!\n");
+            }
+            else {
+                printf("\n--- List of Students ---\n");
+                for (int i = 0; i < count; i++) {
+                    printf("%d. Name: %s | Marks: %d\n", i + 1, students[i].name, students[i].marks);
+                }
+        
+            }
         }
         else if (choice == 3) {
+            if (count == 0) {
+                printf("Students required to calculate average!");
+            }
+            else {
+                int total = 0;
+                for (int i = 0; i < count; i++) {
+                    total += students[i].marks;
+                }
+                double average = (double)total / count;
+
+                printf("\n--- Students average ---\n");
+                printf("Total number of students: %d\n", count);
+                printf("Total marks: %d\n", total);
+                printf("Average marks: %.2f\n", average);
+
+            }
 
         }
         else if (choice == 4) {
