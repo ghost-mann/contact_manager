@@ -71,6 +71,32 @@ int main() {
 
         }
         else if (choice == 4) {
+            if (count == 0) {
+                printf("No students to compare");
+            } else {
+                int highest = students[0].marks;
+                char highestName[50];
+
+                for (int j = 0; students[0].name[j] !='\0'; j++) {
+                    highestName[j] = students[0].name[j];
+                    highestName[j + 1] = '\0';
+                }
+
+                for (int i = 1; i < count; i++) {
+                    if (students[i].marks > highest) {
+                        highest = students[i].marks;
+
+                        for (int j = 0; students[i].name[j] != '\0'; j++) {
+                            highestName[j] = students[i].name[j];
+                            highestName[j + 1] = '\0';
+                        }
+                    }
+                }
+
+                printf("\n--- Highest Marks --- \n");
+                printf("Highest marks: %d\n", highest);
+
+            }
 
         }
         else if (choice == 5) {
